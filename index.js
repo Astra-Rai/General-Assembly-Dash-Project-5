@@ -19,16 +19,30 @@ var prompts = [
 var currentPrompt = 0;
 
 //fucntion that will call the next prompt
+
 var nextPrompt = function(){
+
 //jQuery html() method to return the strings as innerHTML of the div element with class = "prompts". 
 //change content in bracket to variable, 'currentPrompt',now it is dynamic
+//if there is a next prompt, remember current prompt is 0 prompts.length is 3...
+//run the html function inside next prompt that adds 1 to current prompt  
 
+if(currentPrompt < prompts.length){ 
+  
 $('.prompt').html(prompts[currentPrompt]);
-
 
 //make the number held inside currentPrompt be one value larger than the number inside currentPrompt
 currentPrompt = currentPrompt + 1;
+ //put a new message inside the html
+//if currentPrompt = 1 and 1 is less than array.length, which 3...
+//put prompt 1 in HTML, 'Type an adjective'...click button again..
+//currentPrompt is incremented by 1...repeat until end of array  
+  
 
+} else {
+  
+ $('.prompt').html("that's all for now!");
+  }
 }
 
 
@@ -37,3 +51,8 @@ currentPrompt = currentPrompt + 1;
 $('button').click(function() {
   nextPrompt();
 });
+//call funciton nextPrompt at end of script...
+//this will display the string in 0th index of array prompts when page loads
+//funciton called at end of code because javascript reads from top to bottom...
+//javascript doesn't know code for next function until it reads code for the fucntion
+nextPrompt();
