@@ -1,0 +1,38 @@
+	body {
+	text-align: center;
+	font-family: 'Fjalla One';
+	font-size: 20px;
+	/*body background color, light grey*/
+	background: #e6eaf0;
+}
+
+
+/*styling for button element*/
+
+button {
+	/*all four margins are 10px*/
+	margin: 40px;
+}
+
+
+/*styling for input element*/
+
+input {
+	/*font-size for input text 24px*/
+	font-size: 24px;
+}
+
+
+/*styling for span element with class="fill"*/
+
+.fill {
+	background: white;
+	color: red;
+	/*styling for span element with class="fill"*/
+	border-bottom: 2px black solid;
+	font-family: 'Shadows Into Light';
+	/*top and bottom paddings are 25px*/
+	/*right and left paddings are 50px*/
+	padding: 0 6px;
+	/*all four margins are 10px*/
+	margin: 4px;
